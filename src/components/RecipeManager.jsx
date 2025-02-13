@@ -59,14 +59,14 @@ export default function RecipeManager() {
 
     return (
         <div>
-            <h2>Save your recipes here:</h2>
+            <h2>Save your recipes here</h2>
             <RecipeForm
                 currentRecipe={currentRecipe}
                 handleChange={handleChange}
                 handleSubmit={handleSubmit}
                 isEditing={isEditing}
             />
-            <h2>Recipes</h2>
+            <h2>Your Recipes:</h2>
             <RecipeList
                 recipes={recipes}
                 handleEdit={handleEdit}
