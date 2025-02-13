@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 export default function DelightsRecipeFilter({items}) {
-    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedCategory, setSelectedCategory] = useState('');
 
     const filteredItems = items.filter(item => {
         const matchesCategory = selectedCategory === 'all' || item.diet === selectedCategory;
@@ -13,7 +13,7 @@ export default function DelightsRecipeFilter({items}) {
     return (
         <>
             <div className="filter-box">
-                <label htmlFor="category"> Filter by Dietary Need </label>
+                <label htmlFor="category"> <h3>Filter by Dietary Need: </h3> </label>
                 <select
                     id="category"
                     value={selectedCategory}
@@ -31,7 +31,9 @@ export default function DelightsRecipeFilter({items}) {
 
                     <div key={item.id} className="item">
                         {item.name}
-                        <Link to={`/dishdelights/recipes/${item.id}`}>Go to recipe... </Link>
+                        <button>
+                            <Link to={`/dishdelights/recipes/${item.id}`}>Go to recipe... </Link>
+                        </button>
                     </div>
                     
                 ))}

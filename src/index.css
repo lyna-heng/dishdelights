@@ -34,7 +34,11 @@ ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+li {
+  padding-right: 15px;
 }
 
 h1 {
@@ -73,3 +77,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* DelightsRecipeDetails */
+
+ul.ingredients-list {
+  list-style: circle;
+}
+

@@ -16,11 +16,25 @@ export default function DelightsRecipeDetails({ delightsrecipes }) {
     return (
         <div className="recipe-detail-card">
             <h2>{delightsrecipe.name} </h2>
+            <img
+                src={delightsrecipe.image}
+                alt={`${delightsrecipe.image}`}
+                style={{ width: "200px", height: "200px", objectFit: "cover"}}
+            />
             <p>{delightsrecipe.description}</p>
             <span>
-                {delightsrecipe.meal}, {delightsrecipe.diet}
+                Meal: {delightsrecipe.meal}, Diet: {delightsrecipe.diet}
                 <br/>
-                Prep time: {delightsrecipe.preptime} <br/> Cook time: {delightsrecipe.cooktime}
+                Prep time: {delightsrecipe.preptime} <br /> Cook time: {delightsrecipe.cooktime}
+                <h3>Ingredients</h3>
+                <ul className="ingredients-list" >
+                    {delightsrecipe.ingredients.map((ingredient, index) =>
+                        <li key={index}>{ingredient}</li>)}
+                </ul>
+                <div className="instructions-container">
+                    <h3>Instructions</h3>
+                    <p>{delightsrecipe.instructions}</p>
+                </div>
             </span>
         </div>
     );

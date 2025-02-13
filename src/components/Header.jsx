@@ -10,16 +10,16 @@ export default function Header() {
                         <Link to={""}>Home</Link>
                     </li>
                     <li>
-                        <Link to={"about"}>About Us</Link>
+                        <Link to={"about"}>About</Link>
                     </li>
                     <li>
                         <Link to={"recipes"}>DishDelights Recipes</Link>
                     </li>
                     <li>
-                        <Link to={"favourites"}>Your Recipes</Link>
+                        <Link to={"favourites"}>Your Favourite Recipes</Link>
                     </li>
                     <li>
-                        <Link to={"contact"}>Contact Us</Link>
+                        <Link to={"contact"}>Contact</Link>
                     </li>
                 </ul>
                 </nav>

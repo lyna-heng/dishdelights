@@ -7,7 +7,6 @@ export default function Recipes({ delightsrecipes }) {
         <>
             <h2>DishDelights Recipes</h2>
 
-            <h2>Know what youre looking for?</h2>
             <DelightsRecipeFilter items={delightsrecipes} />
 
             
@@ -18,10 +17,16 @@ export default function Recipes({ delightsrecipes }) {
                     <li key={delightsrecipe.id} >
                         <div className="recipe-card">
                             <h2>{delightsrecipe.name}</h2>
-                            <image></image>
+                            <img
+                            src={delightsrecipe.image}
+                            alt={`${delightsrecipe.image}`}
+                            style={{ width: "200px", height: "200px", objectFit: "cover"}}
+                            />
                             <p>{delightsrecipe.description}</p>
                         </div>
-                        <Link to={`/dishdelights/recipes/${delightsrecipe.id}`}>Go to recipe... </Link>
+                        <button>
+                            <Link to={`/dishdelights/recipes/${delightsrecipe.id}`}>Go to recipe </Link>
+                        </button>
                         <br />
                     </li>
                 ))}
