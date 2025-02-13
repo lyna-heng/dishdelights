@@ -11,6 +11,9 @@ import Contact from './views/Contact';
 
 //Components
 
+//Arrays
+import delightsrecipes from './components/DelightsRecipes';
+
 const router = createBrowserRouter([
   {
     path: "/dishdelights/",
@@ -30,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "recipes",
-        element: <Recipes />,
+        element: <Recipes delightsrecipes={delightsrecipes} />,
       },
       {
         path: "favourites",
