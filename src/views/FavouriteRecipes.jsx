@@ -1,5 +1,12 @@
+import RecipeManager from "../components/RecipeManager";
+
 export default function FavouriteRecipes() {
     return (
-        <h2>Your Favourite Recipes</h2>
+        <>
+            <h1>Your Favourite Recipes</h1>
+            <RecipeManager />
+        </>
+       
+
     )
 }

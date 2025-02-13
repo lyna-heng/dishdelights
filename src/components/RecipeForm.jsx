@@ -1,30 +1,29 @@
-import styles from './ArticleManager.module.css';
 
-function ArticleForm({ currentArticle, handleChange, handleSubmit, isEditing }) {
+export default function RecipeForm({ currentRecipe, handleChange, handleSubmit, isEditing }) {
     return (
-        <form onSubmit={handleSubmit} className={styles.form}>
-            <div>
-                <label>Title:</label>
+        <form onSubmit={handleSubmit}>
+            <div> 
+                <label>Recipe Title:</label>
                 <input
                     type="text"
                     name="title"
-                    value={currentArticle.title}
+                    value={currentRecipe.title}
                     onChange={handleChange}
                     required
                 />
             </div>
             <div>
-                <label>Article:</label>
+                <label>Instructions</label>
                 <textarea
                     name="content"
-                    value={currentArticle.content}
+                    value={currentRecipe.content}
                     onChange={handleChange}
                     required
                 />
             </div>
-            <button type="submit">{isEditing ? 'Update' : 'Create'} Article</button>
+            <button type="submit">{isEditing ? 'Update' : 'Create'} Recipe</button>
         </form>
     );
 }
 
-export default ArticleForm;
+

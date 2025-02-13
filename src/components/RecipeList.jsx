@@ -1,12 +1,10 @@
-import styles from './ArticleManager.module.css';
-
-function ArticleList({ articles, handleEdit, handleDelete }) {
+export default function RecipeList({ recipes, handleEdit, handleDelete }) {
     return (
-        <ul className={styles.articleList}>
-            {articles.map((article, index) => (
-                <li key={index} className={styles.articleItem}>
-                    <h3>{article.title}</h3>
-                    <p>{article.content}</p>
+        <ul>
+            {recipes.map((recipe, index) => (
+                <li key={index}>
+                    <h3>{recipe.title}</h3>
+                    <p>{recipe.content}</p>
                     <button onClick={() => handleEdit(index)}>Edit</button>
                     <button onClick={() => handleDelete(index)}>Delete</button>
                 </li>
@@ -14,5 +12,3 @@ function ArticleList({ articles, handleEdit, handleDelete }) {
         </ul>
     );
 }
-
-export default ArticleList;

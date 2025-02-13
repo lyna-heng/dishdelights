@@ -5,7 +5,7 @@ import DelightsRecipeFilter from "../components/DelightsRecipeFilter";
 export default function Recipes({ delightsrecipes }) {
     return (
         <>
-            <h2>DishDelights Recipes</h2>
+            <h1>DishDelights Recipes</h1>
 
             <DelightsRecipeFilter items={delightsrecipes} />
 
