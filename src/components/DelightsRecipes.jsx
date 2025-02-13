@@ -14,7 +14,7 @@ const delightsrecipes = [
         name: 'Chocolate Brownies',
         description: 'A sneaky sweet treat.',
         diet: 'Vegetarian',
-        meal: 'Dinner',
+        meal: 'Dessert',
         preptime: 23,
         cooktime: 20
     },

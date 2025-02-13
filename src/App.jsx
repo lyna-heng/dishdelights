@@ -10,6 +10,7 @@ import About from './views/About';
 import Contact from './views/Contact';
 
 //Components
+import DelightsRecipeDetails from './components/DelightsRecipeDetails';
 
 //Arrays
 import delightsrecipes from './components/DelightsRecipes';
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "recipes",
         element: <Recipes delightsrecipes={delightsrecipes} />,
+      },
+      {
+        path: "recipes/:id",
+        element: <DelightsRecipeDetails delightsrecipes={delightsrecipes}/>
       },
       {
         path: "favourites",
