@@ -32,7 +32,7 @@ export default function DelightsRecipeFilter({items}) {
                     <div key={item.id} className="item">
                         {item.name}
                         <button>
-                            <Link to={`/dishdelights/recipes/${item.id}`}>Go to recipe... </Link>
+                            <Link to={`/dishdelights/recipes/${item.id}`}>Go to recipe</Link>
                         </button>
                     </div>
                     

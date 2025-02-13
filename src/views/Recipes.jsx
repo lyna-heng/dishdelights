@@ -16,18 +16,20 @@ export default function Recipes({ delightsrecipes }) {
                 {delightsrecipes.map((delightsrecipe) => (
                     <li key={delightsrecipe.id} >
                         <div className="recipe-card">
-                            <h2>{delightsrecipe.name}</h2>
-                            <img
-                            src={delightsrecipe.image}
-                            alt={`${delightsrecipe.image}`}
-                            style={{ width: "200px", height: "200px", objectFit: "cover"}}
-                            />
-                            <p>{delightsrecipe.description}</p>
+                            <div>
+                                <h2>{delightsrecipe.name}</h2>
+                                <img
+                                src={delightsrecipe.image}
+                                alt={`${delightsrecipe.image}`}
+                                style={{ width: "200px", height: "200px", objectFit: "cover"}}
+                                />
+                                <p>{delightsrecipe.description}</p>
+                            </div>
+                            <button>
+                                <Link to={`/dishdelights/recipes/${delightsrecipe.id}`}>Go to recipe </Link>
+                            </button>
+
                         </div>
-                        <button>
-                            <Link to={`/dishdelights/recipes/${delightsrecipe.id}`}>Go to recipe </Link>
-                        </button>
-                        <br />
                     </li>
                 ))}
             </ul>

@@ -19,7 +19,7 @@ export default function DelightsRecipeDetails({ delightsrecipes }) {
             <img
                 src={delightsrecipe.image}
                 alt={`${delightsrecipe.image}`}
-                style={{ width: "200px", height: "200px", objectFit: "cover"}}
+                style={{ width: "400px", height: "400px", objectFit: "cover"}}
             />
             <p>{delightsrecipe.description}</p>
             <span>
