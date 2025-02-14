@@ -15,7 +15,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #7886C7;
   text-decoration: inherit;
 }
 a:hover {
@@ -64,6 +64,15 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.custombutton{
+  color: #FFF2F2;
+  background-color: #2D336B;
+}
+
+.custombutton a {
+  color: #FFF2F2;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

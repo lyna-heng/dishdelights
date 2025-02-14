@@ -2,14 +2,15 @@ export default function RecipeForm({ currentRecipe, handleChange, handleSubmit, 
     return (
         <form onSubmit={handleSubmit}>
             <div> 
-                <label>Recipe Title:</label>
-                <input
+                <label>Recipe Title:
+                    <input
                     type="text"
                     name="title"
                     value={currentRecipe.title}
                     onChange={handleChange}
                     required
                 />
+                </label>
             </div>
             <div>
                 <label>Description:</label>
@@ -38,9 +39,8 @@ export default function RecipeForm({ currentRecipe, handleChange, handleSubmit, 
                     required
                 />
             </div>
-            <button type="submit">{isEditing ? 'Update' : 'Create'} Recipe</button>
+            <button className="custombutton" type="submit">{isEditing ? 'Update' : 'Create'} Recipe</button>
         </form>
     );
 }
-
 

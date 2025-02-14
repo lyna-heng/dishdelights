@@ -1,6 +1,7 @@
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './Layout';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 //Pages
 import Home from './views/Home';
@@ -48,11 +49,24 @@ const router = createBrowserRouter([
   },
 ]);
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#FFF2F2', // Customize your primary color
+    },
+    secondary: {
+      main: '#102C57', // Customize your secondary color
+    },
+  },
+});
+
 
 function App() {
 
   return (
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 

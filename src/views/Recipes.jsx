@@ -25,7 +25,7 @@ export default function Recipes({ delightsrecipes }) {
                                 />
                                 <p>{delightsrecipe.description}</p>
                             </div>
-                            <button>
+                            <button className="custombutton">
                                 <Link to={`/dishdelights/recipes/${delightsrecipe.id}`}>Go to recipe </Link>
                             </button>
 

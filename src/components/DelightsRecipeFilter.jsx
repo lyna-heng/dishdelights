@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
-export default function DelightsRecipeFilter({items}) {
+export default function DelightsRecipeFilter({ items }) {
+    
     const [selectedCategory, setSelectedCategory] = useState('');
 
     const filteredItems = items.filter(item => {
@@ -31,7 +32,7 @@ export default function DelightsRecipeFilter({items}) {
 
                     <div key={item.id} className="item">
                         {item.name}
-                        <button>
+                        <button className="custombutton" >
                             <Link to={`/dishdelights/recipes/${item.id}`}>Go to recipe</Link>
                         </button>
                     </div>

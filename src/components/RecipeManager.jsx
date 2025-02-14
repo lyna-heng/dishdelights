@@ -7,7 +7,7 @@ export default function RecipeManager() {
 
     /* Initialise recipes, retrieves any recipes that may have been previously saved.
     (saved recipes --> JS objects using JSON.parse)
-    If there are saved recipies returned then useState is initialised with the recipe data. If not, then an empty array is initialised. */
+    If there are saved recipes returned then useState is initialised with the recipe data. If not, then an empty array is initialised. */
     const [recipes, setRecipes] = useState(() => {
             const savedRecipes = localStorage.getItem('recipes');
             return savedRecipes ? JSON.parse(savedRecipes) : [];
